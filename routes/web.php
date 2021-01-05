@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'Web'], function () {
+    Route::post('login', 'LoginController@login')->name('login');
 });
